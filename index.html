@@ -21,20 +21,36 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
+              <div class="numbertext">1 / 6</div>
               <img id="kepes" src="fekete.png" style="width:100%">
             </div>
           
             <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
+              <div class="numbertext">2 / 6</div>
               <img src="kek.png" style="width:100%">
             </div>
           
             <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
+              <div class="numbertext">3 / 6</div>
               <img src="feher.jpg" style="width:100%">
             </div>
-              <img class="kep" src="fehersziv.png" height="100px" onclick="videjo()"  width="100px">
+
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 6</div>
+              <img src="feher.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 6</div>
+              <img src="feher.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 6</div>
+              <img src="feher.jpg" style="width:100%">
+            </div>
+
+              <img class="kep" src="fehersziv.png" height="100px" onclick="playVideo()"  width="100px">
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             
@@ -51,7 +67,7 @@
           <br>
           
           <!-- The dots/circles -->
-          <a class="gomb" href="#">Kattints ideee</a>
+          <a class="gomb" href="https://i.ytimg.com/vi/ZZJawQWcUQg/maxresdefault.jpg">Kattints ideee</a>
     </div>
     <script>
         var sound = document.getElementById("sound1");
@@ -73,10 +89,24 @@
 
 
 
-
-        function videjo(){
-            let kep = document.getElementById('kepes');
-            kep.innerHTML = '<video src="video.mp4" style="width:100%" controls></video>';
+        var kanter = 0;
+       
+        function playVideo() {
+          if (kanter < 2){
+          var slide = document.getElementById("kepes").parentNode;
+          kanter++;
+          slide.innerHTML = '<div id="kepes" class="video-container"><video controls><source src="video.mp4" type="video/mp4"></video></div>';
+          alert('\
+              Meenj az elő oldalra Kideem\n\
+    vagy haa ottvaagy akkor indítsd el a videótt!😘❤️❤️')
+        }
+          
+    if (kanter > 1){
+      var slide = document.getElementById("kepes").parentNode;
+      slide.innerHTML = '              <div class="numbertext">1 / 6</div>\n\
+      <img id="kepes" src="fekete.png" style="width:100%">';
+      kanter = kanter - 2;
+    }
         }
 
 
