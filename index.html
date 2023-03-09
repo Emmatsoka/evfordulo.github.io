@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Évforduló</title>
+</head>
+<body>
+    <audio id="sound1">
+        <source src="hang1.mp3" type="audio/mpeg">
+      </audio>
+    <div class="tartalom">
+        <div class="header">
+        <h1>Boldog évfordulót  <div id="bia"  >Biám</div></h1>
+        <img  src="pirossziv.png" height="70px" width="70px" onclick="playSound()" title="Rám ne kattints!!!">
+            
+    </div>
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img id="kepes" src="sarga.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="kek.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="feher.jpg" style="width:100%">
+            </div>
+              <img class="kep" src="fehersziv.png" height="100px" onclick="videjo()"  width="100px">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        
+          </div>
+        <div id="kepek">
+          <img id="kicsiszivek" class="dot" onclick="currentSlide(1)" src="pirossziv.png" height="40x" width="40px">
+          <img id="kicsiszivek" class="dot" onclick="currentSlide(2)" src="narancssziv.png" height="40x" width="40px">
+          <img id="kicsiszivek" class="dot" onclick="currentSlide(3)" src="sargasziv.png" height="40x" width="40px">
+          <img id="kicsiszivek" class="dot" onclick="currentSlide(4)" src="zoldsziv.png" height="40x" width="40px">
+          <img id="kicsiszivek" class="dot" onclick="currentSlide(5)" src="keksziv.png" height="40x" width="40px">
+          <img id="kicsiszivek" class="dot" onclick="currentSlide(6)" src="lilasziv.png" height="40x" width="40px">
+        </div>
+          <br>
+          
+          <!-- The dots/circles -->
+          <a class="gomb" href="#">Kattints ideee</a>
+    </div>
+    <script>
+        var sound = document.getElementById("sound1");
+        var count = 0;
+        
+        function playSound() {
+          count++;
+          if (count == 1) {
+            sound.play();
+          } else if (count == 2) {
+            sound.src = "hang2.mp3";
+            sound.load();
+            sound.play();
+            
+          } else {
+            window.location.href = "https://r.mtdv.me/videos/RxNfSWaoTj";
+          }
+        }
+
+
+
+
+        function videjo(){
+            let kep = document.getElementById('kepes');
+            kep.innerHTML = '<video src="video.mp4" style="width:100%" controls></video>';
+        }
+
+
+        var cycle = 0;
+        var isTransitioning = false;
+        var allBackgrounds = [
+          "zold.jpg",
+          "sarga.png",
+          "kek.png",
+          "feher.jpg",
+          "rozsaszin.jpg",
+          "lila.jpg"
+        ];
+        
+        function changeBackground() {
+          if (!isTransitioning) {
+            isTransitioning = true;
+            var img = new Image();
+            img.onload = function() {
+              document.body.style.setProperty('background-image', 'url(' + img.src + ')');
+              cycle = (cycle + 1) % allBackgrounds.length;
+              isTransitioning = false;
+              setTimeout(changeBackground, 7000); // 5 másodperces késleltetés
+            };
+            img.onerror = function() {
+              cycle = (cycle + 1) % allBackgrounds.length;
+              isTransitioning = false;
+              setTimeout(changeBackground, 7000); // 5 másodperces késleltetés
+            };
+            img.src = allBackgrounds[cycle];
+          }
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+        changeBackground();
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+@font-face {
+    font-family: choco;
+    src: url(White\ Chocolate\ Mint\ -\ TTF.ttf);
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: choco;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-image: url('barna.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.tartalom{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5%;
+}
+#bia{
+    display: inline-block;
+    
+}
+.tartalom{
+    background-color: rgba(0, 0, 0, 0.233);
+}
+.tartalom h1{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 5vh;
+    padding-top: 20px;
+    padding-bottom:20px;
+    background-image: url('h1kep.png');
+    max-width: 600px;
+    margin:0 auto;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    
+}
+.header{
+    position: relative;
+    max-width: 600px;
+    margin:0 auto;
+}
+.header img{
+    position:absolute;
+    bottom:-20px;
+    right:-20px;
+
+}
+.gomb{
+    background: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    margin:40px;
+    font-size: large;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+.gomb{
+    text-decoration: none;
+    color:black;
+}
+.gomb:hover{
+    background-color: rgb(0, 0, 0);
+    color:white
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top:40px;
+    background: white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0);
+    margin-bottom: 20px;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    border-right: 5px solid rgb(255, 255, 255);
+    border-top: 5px solid rgb(255, 255, 255);
+    border-left: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+
+  }
+  .mySlides img{
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    padding-top:3px;
+    max-height: 570px;
+}
+.mySlides:hover{
+    border-right: 5px solid rgba(255, 255, 255, 0.589);
+    border-top: 5px dashed rgba(255, 255, 255, 0.589);
+    border-left: 5px solid rgba(255, 255, 255, 0.589);
+    border-bottom: 5px dashed rgba(255, 255, 255, 0.589);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.589);
+}
+  
+  /* Next & previous buttons */
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 4px 4px 0;
+    user-select: none;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    -o-border-radius: 0 4px 4px 0;
+    zoom:1.7;
+    animation-name: dalami0;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+}
+#kepek{
+    background-color: white;
+    border-radius: 20px;
+    padding:5px;
+    max-width: 310px;
+    margin:0 auto;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.prev{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 4px 4px 0;
+    user-select: none;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    -ms-border-radius: 0 4px 4px 0;
+    -o-border-radius: 0 4px 4px 0;
+    zoom:1.7;
+    animation-name: dalami1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+}
+.prev:hover{
+    animation-name: valami1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+}
+.next:hover{
+    animation-name: valami0;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+}
+  .kep{
+    background-image: url('fehersziv.png');
+    background-size: contain;
+    border: none;
+    position: absolute;
+    bottom:-40px;
+    right:-20px;
+    transition: 1.0s;
+    -webkit-transition: 1.0s;
+    -moz-transition: 1.0s;
+    -ms-transition: 1.0s;
+    -o-transition: 1.0s;
+    animation-name: szivdobogas;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    cursor:pointer;
+  }
+ .kep:active{
+    zoom:1.2;
+ }
+  @keyframes dalami1{
+    0%{
+        margin-left: 2px;
+    }
+    20%{
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: 2px;
+    }
+    70%{
+        margin-left: 0px;
+    }
+    90%{
+        margin-left: 2px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+@keyframes dalami0{
+    0%{
+        margin-right: 2px;
+    }
+    20%{
+        margin-right: 0px;
+    }
+    50%{
+        margin-right: 2px;
+    }
+    70%{
+        margin-right: 0px;
+    }
+    90%{
+        margin-right: 2px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+  @keyframes valami1{
+    0%{
+        margin-left: 5px;
+    }
+    20%{
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: 5px;
+    }
+    70%{
+        margin-left: 0px;
+    }
+    90%{
+        margin-left: 5px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+@keyframes valami0{
+    0%{
+        margin-right: 5px;
+    }
+    20%{
+        margin-right: 0px;
+    }
+    50%{
+        margin-right: 5px;
+    }
+    70%{
+        margin-right: 0px;
+    }
+    90%{
+        margin-right: 5px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+@keyframes szivdobogas
+{
+  0%
+  {
+    transform: scale( 1.15 );
+    -webkit-transform: scale( 1.15 );
+    -moz-transform: scale( 1.15 );
+    -ms-transform: scale( 1.15 );
+    -o-transform: scale( 1.15 );
+}
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( 1.15 );
+    -webkit-transform: scale( 1.15 );
+    -moz-transform: scale( 1.15 );
+    -ms-transform: scale( 1.15 );
+    -o-transform: scale( 1.15 );
+}
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( 1.15 );
+    -webkit-transform: scale( 1.15 );
+    -moz-transform: scale( 1.15 );
+    -ms-transform: scale( 1.15 );
+    -o-transform: scale( 1.15 );
+  }
+  100%
+  {
+    transform: scale( 1.15 );
+    -webkit-transform: scale( 1.15 );
+    -moz-transform: scale( 1.15 );
+    -ms-transform: scale( 1.15 );
+    -o-transform: scale( 1.15 );
+  }
+}
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev{
+        left: 0;
+        border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+    -webkit-transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease;
+    -ms-transition: opacity 0.6s ease;
+    -o-transition: opacity 0.6s ease;
+}
+  
+  .active, .dot:hover {
+    opacity: 0.5;
+    zoom: 1.05;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  .center{
+    text-align: center;
+    margin:  0 auto;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+  }
